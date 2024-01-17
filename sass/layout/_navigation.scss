@@ -17,6 +17,15 @@
       box-shadow: 0 1rem 3rem rgba($color-black,.1);
       text-align: center;
       cursor: pointer;
+      @include respond(tab-port){
+         top:4.5rem;
+         right: 4.5rem;
+
+      }
+      @include respond(phone){
+         top:3rem;
+         right:3rem;
+      }
    }
 
    &__background{
@@ -30,6 +39,16 @@
         z-index:1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
       //   transform:scale(80);
+        @include respond(tab-port){
+         top: 4.5rem;
+         right: 4.5rem;
+
+      }
+         @include respond(phone){
+            top: 3.5rem;
+            right:3.5rem;
+         }
+      
    }
 
    &__nav{
@@ -118,7 +137,7 @@
   }
   &::before{
    top: -.8rem;
-   transform-origin: right;
+   // transform-origin: right;
   }
   &::after {top: .8rem}
 
@@ -147,6 +166,6 @@
       top: 0;
       transform: rotate(-135deg);
    
+ }
 }
-  }
       
